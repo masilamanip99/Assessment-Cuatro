@@ -1,4 +1,8 @@
+// Problem 2 – Partner Assignment Logic
+// Assign a partner based on availability, lowest active workload, and same city. Write a 
+// function to return the best partner_id and explain tie-breaking logic. 
 
+    
 async function getBestPartner(city){
     const query = `SELECT 
             p.id,
@@ -39,4 +43,5 @@ app.get("/assign-partner/:city", async (req, res) =>{
         res.status(500).json({
             message : "Error assigning partner"
         })}
+
 })
