@@ -1,3 +1,8 @@
+// Problem 1 – Slot-Based Booking System
+// Design a slot-based booking system where a partner can accept only one booking per time 
+// slot. Ensure prevention of double booking, atomic booking creation, and concurrency safety. 
+// Design the database table and write API-level logic or pseudocode.
+
 const express  = require("express")
 const { Pool } = require("pg")
 const app = express()
@@ -141,4 +146,5 @@ app.listen(PORT, async () =>
  {
      await setupDatabase()
     console.log("Server started on port " + PORT)
+
  })
