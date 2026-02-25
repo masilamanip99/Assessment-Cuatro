@@ -1,4 +1,7 @@
-
+// Problem 3 – Payment Webhook Handling 
+// Design a payments table and write webhook handling logic that is idempotent, handles 
+// duplicate events, and safely updates booking and payment status. 
+    
 async function createPaymentTable(){
     const connection = await db.connect()
 try{
@@ -100,4 +103,5 @@ app.post("/webhook/payment", async (req, res) =>{
     finally{
         connection.release()
     }
+
 })
