@@ -1,3 +1,7 @@
+// Problem 4 – Cancellation & Refund Flow 
+// Implement cancellation logic for bookings with full or partial refunds based on assignment 
+// status. Ensure financial consistency using transactions
+
 app.post("/bookings/:bookingId/cancel", async (req, res) =>{
 const bookingId = req.params.bookingId
 const connection = await db.connect()
@@ -83,4 +87,5 @@ await connection.query("ROLLBACK")
 finally{
     connection.release()
 }
+
 })
